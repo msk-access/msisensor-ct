@@ -22,12 +22,12 @@ LABEL org.opencontainers.image.created=${BUILD_DATE} \
 LABEL org.opencontainers.image.description="This container has the base image to build msk-access version of MSIsensor-ct ${MSISENSOR_CT_VERSION}"
 
 ################## INSTALL ##########################
-WORKDIR /app
-ADD . /app
+WORKDIR /
+ADD . /
 RUN apt-get update && apt-get install -y git make build-essential liblzma-dev libbz2-dev zlib1g-dev libncurses5-dev libncursesw5-dev
 
 # Copy project
-ADD . /app
+ADD . /
 CMD ["bash"]
 
 
