@@ -23,10 +23,8 @@ LABEL org.opencontainers.image.description="This container has the base image to
 
 ################## INSTALL ##########################
 
-ADD ./* /usr/bin
+ADD ./msisensor-ct /usr/bin
 WORKDIR /usr/bin
 
 RUN apt-get update && apt-get install -y git make build-essential liblzma-dev libbz2-dev zlib1g-dev libncurses5-dev libncursesw5-dev
 
-# Set default cmd
-CMD ["bash"]
